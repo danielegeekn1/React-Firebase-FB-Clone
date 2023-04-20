@@ -6,8 +6,9 @@ import fbString from "../src/img/fb-strings.png";
 import fbLogo from "../src/img/fb-logo-circle.png";
 import { Button } from "@mui/material";
 const Login = () => {
-  const handleSubmit = (e) => {
+  const handleSignIn = (e) => {
     e.preventDefault();
+    //sign in logic with firebase
   };
   return (
     <div className="login">
@@ -15,7 +16,7 @@ const Login = () => {
         <img src={fbLogo} alt="fbLogo" />
         <img src={fbString} alt="fbString" />
       </div>
-      <Button type="submit" onSubmit={handleSubmit} className="button">
+      <Button type="submit" onClick={handleSignIn} className="button">
         Sign in
       </Button>
     </div>
