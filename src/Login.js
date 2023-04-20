@@ -13,6 +13,14 @@ const Login = () => {
   const handleSignIn = (e) => {
     e.preventDefault();
     //sign in logic with firebase
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        console.log("result", result);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
   };
   return (
     <div className="login">
