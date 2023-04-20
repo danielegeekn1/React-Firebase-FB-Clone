@@ -1,3 +1,7 @@
 .sidebarRow {
   display: flex;
 }
+.sidebarRow:hover {
+  background-color: lightgrey;
+  border-radius: 10px;
+}

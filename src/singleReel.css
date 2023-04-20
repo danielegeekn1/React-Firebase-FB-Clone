@@ -1,0 +1,27 @@
+.singleReel {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 200px;
+  border-radius: 15px;
+  margin-right: 10px;
+  transition: transform 100ms ease-in;
+}
+.singleReel:hover {
+  transform: scale(1.07);
+}
+.singleReel > h4 {
+  font-size: medium;
+  font-weight: 700;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: black;
+}
+.singleReel_avatar {
+  margin: 10px;
+  position: absolute;
+  border: 2px solid blue;
+}
