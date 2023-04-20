@@ -6,7 +6,7 @@ import fbString from "../src/img/fb-strings.png";
 import fbLogo from "../src/img/fb-logo-circle.png";
 import { Button } from "@mui/material";
 //import from firebase
-import { auth, provider } from "./firebase";
+import { auth, provider, user } from "./firebase";
 //import { actionTypes } from "./reducer";
 //import { useStateContext } from "./StateProvider";
 const Login = () => {
@@ -17,6 +17,11 @@ const Login = () => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
+        if (user) {
+          console.log("User display name: ", user.displayName);
+          console.log("User email: ", user.email);
+          console.log("User photoURL: ", user.photoURL);
+        }
         /*
         dispatch({
           type: actionTypes.Set_User,
