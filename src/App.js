@@ -1,9 +1,17 @@
 import "./App.css";
+import Header from "./Header";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Fb clone with React</h1>
+    //BEM convention names
+    <div className="app">
+      <Header />
+      <div className="app_body">
+        {/*Story*/}
+        {/*Sidebar*/}
+        {/*Stories*/}
+        {/*Widgets*/}
+      </div>
     </div>
   );
 }
