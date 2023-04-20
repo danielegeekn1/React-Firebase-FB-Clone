@@ -1,0 +1,26 @@
+.messageSection_top {
+  display: flex;
+  padding: 15px;
+}
+.messageSection_bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.messageSection_top > form {
+  display: flex;
+  flex: 1;
+}
+.messageSection_top > form > input {
+  outline-width: 0;
+  background-color: #eff2f5;
+  padding: 5px 20px;
+  border-radius: 33px;
+  border: none;
+}
+.messageSection_top > form > button {
+  display: none;
+}
+.messageSection_input {
+  flex: 1;
+}

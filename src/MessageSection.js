@@ -1,5 +1,5 @@
 import { Avatar } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 //import css
 import "./messageSection.css";
 //import from material ui
@@ -7,8 +7,13 @@ import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 const MessageSection = () => {
+  const [input, setInput] = useState("");
+  const [imgUrl, setImgUrl] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    //setInput('')
+    //setImgUrl('')
   };
   return (
     <div className="messageSection">
@@ -16,11 +21,17 @@ const MessageSection = () => {
         <Avatar />
         <form>
           <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             type="text"
             placeholder="what's in your mind?"
             className="messageSection_input"
           />
-          <input placeholder="image url optional" />
+          <input
+            placeholder="image url optional"
+            value={imgUrl}
+            onChange={(e) => setImgUrl(e.target.value)}
+          />
           <button onClick={handleSubmit}>Submit</button>
         </form>
       </div>
