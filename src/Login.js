@@ -7,7 +7,8 @@ import fbLogo from "../src/img/fb-logo-circle.png";
 import { Button } from "@mui/material";
 //import from firebase
 import { auth, provider } from "./firebase";
-
+//import { actionTypes } from "./reducer";
+//import { useStateContext } from "./StateProvider";
 const Login = () => {
   //const [state, dispatch] = useStateContext();
   const handleSignIn = (e) => {
@@ -21,9 +22,10 @@ const Login = () => {
           type: actionTypes.Set_User,
           user: result.user,
         });
+
+        console.log(result, state);
         */
-        console.log(result);
-        //console.log("result", result);
+        console.log("result", result);
       })
       .catch((err) => {
         alert(err.message);
