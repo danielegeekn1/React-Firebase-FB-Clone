@@ -5,6 +5,10 @@ import "./login.css";
 import fbString from "../src/img/fb-strings.png";
 import fbLogo from "../src/img/fb-logo-circle.png";
 import { Button } from "@mui/material";
+//import from firebase
+import { auth, provider } from "./firebase";
+
+//const { auth, provider } = require("./firebase.js");
 const Login = () => {
   const handleSignIn = (e) => {
     e.preventDefault();
