@@ -11,7 +11,6 @@ function App() {
   //const [{ user }, dispatch] = useStateContext();
   return (
     //BEM convention names
-
     <div className="app">
       {!user ? (
         <Login />

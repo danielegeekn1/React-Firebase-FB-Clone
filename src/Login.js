@@ -30,6 +30,7 @@ const Login = () => {
 
         console.log(result, state);
         */
+        console.log("user", user);
         console.log("result", result);
       })
       .catch((err) => {
