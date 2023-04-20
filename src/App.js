@@ -3,9 +3,11 @@ import Feed from "./Feed";
 import Header from "./Header";
 import Login from "./Login";
 import Sidebar from "./Sidebar";
+//import { useStateContext } from "./StateProvider";
 
 function App() {
   const user = null;
+  //const [{ user }, dispatch] = useStateContext();
   return (
     //BEM convention names
 

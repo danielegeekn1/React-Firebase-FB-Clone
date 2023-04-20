@@ -8,15 +8,22 @@ import { Button } from "@mui/material";
 //import from firebase
 import { auth, provider } from "./firebase";
 
-//const { auth, provider } = require("./firebase.js");
 const Login = () => {
+  //const [state, dispatch] = useStateContext();
   const handleSignIn = (e) => {
     e.preventDefault();
     //sign in logic with firebase
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        console.log("result", result);
+        /*
+        dispatch({
+          type: actionTypes.Set_User,
+          user: result.user,
+        });
+        */
+        console.log(result);
+        //console.log("result", result);
       })
       .catch((err) => {
         alert(err.message);
