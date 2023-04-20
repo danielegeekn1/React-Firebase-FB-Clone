@@ -26,7 +26,16 @@
 }
 .post_msg {
   position: absolute;
-  bottom: 25px;
+  bottom: 75px;
   right: 45px;
   font-weight: 800;
+}
+.post_options {
+  display: flex;
+  justify-content: space-between;
+  transition: transform 100ms ease-in;
+}
+.post_option:hover {
+  transform: scale(1.1);
+  color: lightgrey;
 }
