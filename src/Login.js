@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //import css
 import "./login.css";
 //import images from my folder
@@ -6,22 +6,23 @@ import fbString from "../src/img/fb-strings.png";
 import fbLogo from "../src/img/fb-logo-circle.png";
 import { Button } from "@mui/material";
 //import from firebase
-import { auth, provider, user } from "./firebase";
-//import { actionTypes } from "./reducer";
+import { auth, provider } from "./firebase";
+import { useNavigate } from "react-router";
+
 //import { useStateContext } from "./StateProvider";
+//import { actionTypes } from "./reducer";
+
 const Login = () => {
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
   //const [state, dispatch] = useStateContext();
+
   const handleSignIn = (e) => {
     e.preventDefault();
     //sign in logic with firebase
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        if (user) {
-          console.log("User display name: ", user.displayName);
-          console.log("User email: ", user.email);
-          console.log("User photoURL: ", user.photoURL);
-        }
         /*
         dispatch({
           type: actionTypes.Set_User,
@@ -29,9 +30,15 @@ const Login = () => {
         });
 
         console.log(result, state);
-        */
+*/
+        let user = result.user;
+        setUser(user);
+        if (user) {
+          navigate("/main");
+        }
         console.log("user", user);
         console.log("result", result);
+        console.log("resultUser", result.user.email);
       })
       .catch((err) => {
         alert(err.message);
