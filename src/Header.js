@@ -1,4 +1,3 @@
-import React from "react";
 //import images from my folder
 import fbString from "./img/facebook-string.jpeg";
 //import css
@@ -7,7 +6,13 @@ import "../src/header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Avatar } from "@mui/material";
+import { useNavigate } from "react-router";
+
 const Header = () => {
+  const navigate = useNavigate();
+  const logout = () => {
+    navigate("/");
+  };
   return (
     <div className="header">
       <div className="header_left">
@@ -27,6 +32,7 @@ const Header = () => {
         <div className="header_options">
           <div className="header_option">
             <NotificationsIcon fontSize="large" />
+            <p onClick={logout}>logout</p>
           </div>
         </div>
       </div>

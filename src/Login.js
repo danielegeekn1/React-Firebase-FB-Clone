@@ -35,10 +35,10 @@ const Login = () => {
         setUser(user);
         if (user) {
           navigate("/main");
+          console.log("user", user);
+          console.log("result", result);
+          console.log("resultUser", result.user.email);
         }
-        console.log("user", user);
-        console.log("result", result);
-        console.log("resultUser", result.user.email);
       })
       .catch((err) => {
         alert(err.message);
